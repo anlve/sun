@@ -2,12 +2,12 @@
 spring:
   datasource:
     name: sun
-    url: jdbc:mysql://localhost:3306/sun?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+    url: jdbc:mysql://localhost:3306/sun?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
-    password: 123456
+    password: root
     # 使用druid数据源   
     type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
     filters: stat,wall,slf4j
 #    filters: stat
