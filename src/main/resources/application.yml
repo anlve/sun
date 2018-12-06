@@ -4,12 +4,18 @@ server:
 spring:
     datasource:
         name: sun
-        url: jdbc:mysql://127.0.0.1:3306/sun
+        url: jdbc:mysql://localhost:3306/sun?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
         username: root
-        password: 123456
+#        MAC
+        password: root
+#        Windows
+#        password: 123456
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
+#        Mac
+        driver-class-name: com.mysql.cj.jdbc.Driver
+#        windoss
+#        driver-class-name: com.mysql.jdbc.Driver
         #配置监控统计拦截的filters
         filters: stat
         #配置初始化大小
