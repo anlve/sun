@@ -11,7 +11,8 @@ mybatis:
   #   对应实体类路径
   type-aliases-package: com.anlve.sun.model
   # mapper映射文件扫描
-  mapper-locations: classpath:mapper/**/*Mapper.xml
+#  mapper-locations: classpath:mapper/**/*Mapper.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
 
 # PageHelper
 pagehelper:

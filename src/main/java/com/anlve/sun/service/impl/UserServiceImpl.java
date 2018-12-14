@@ -11,8 +11,8 @@ import com.anlve.sun.service.UserService;
 import com.github.pagehelper.PageHelper;
 
 @Service
-public class UserServiceImpl implements UserService{
-	
+public class UserServiceImpl implements UserService {
+
 	@Autowired
 	private UserMapper userMapper;
 
@@ -22,11 +22,10 @@ public class UserServiceImpl implements UserService{
 	}
 
 	/**
-	 * pageNum	开始页数
-	 * pageSize	每页显示的数据条数
+	 * pageNum 开始页数 pageSize 每页显示的数据条数
 	 */
 	public List<User> findAllUser(int pageNum, int pageSize) {
-		//将参数传给这个方法就可以实现物理分页了，非常简单。
+		// 将参数传给这个方法就可以实现物理分页了，非常简单。
 		PageHelper.startPage(pageNum, pageSize);
 		return userMapper.selectAllUser();
 	}
