@@ -20,3 +20,9 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
+  
+#thymeleaf:
+#  cache:false
+#  cache-period:0
+#template:
+#  cache:false
