@@ -1,6 +1,9 @@
 package com.anlve.sun.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +17,11 @@ public class HotspotController {
 	@Autowired
     private HotspotService hotspotService;
 
+	@RequestMapping(value = "/all/{pageNum}/{pageSize}", method = RequestMethod.POST)
+    public List<Hotspot> all(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
+        return hotspotService.selectAll(pageNum,pageSize);
+    }
+	
     @RequestMapping(value = "/del", method = RequestMethod.DELETE)
     public int del(String id){
         return hotspotService.deleteByPrimaryKey(id);

@@ -1,5 +1,7 @@
 package com.anlve.sun.service.impl;
 
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,6 +10,7 @@ import com.anlve.sun.dao.HotspotMapper;
 import com.anlve.sun.model.Hotspot;
 import com.anlve.sun.service.HotspotService;
 import com.anlve.sun.util.UUIDUtils;
+import com.github.pagehelper.PageHelper;
 
 @Service
 public class HotspotServiceImpl implements HotspotService {
@@ -78,6 +81,12 @@ public class HotspotServiceImpl implements HotspotService {
 			// id is null
 			return 0;
 		}
+	}
+
+	@Override
+	public List<Hotspot> selectAll(int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+		return hotspotMapper.selectAll();
 	}
 
 }

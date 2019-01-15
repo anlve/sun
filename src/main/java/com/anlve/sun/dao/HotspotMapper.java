@@ -1,8 +1,13 @@
 package com.anlve.sun.dao;
 
+import java.util.List;
+
 import com.anlve.sun.model.Hotspot;
 
 public interface HotspotMapper {
+	
+	List<Hotspot> selectAll();
+	
     int deleteByPrimaryKey(String id);
 
     int insert(Hotspot record);

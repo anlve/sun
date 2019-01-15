@@ -1,8 +1,12 @@
 package com.anlve.sun.service;
 
+import java.util.List;
+
 import com.anlve.sun.model.Hotspot;
 
 public interface HotspotService {
+	
+	List<Hotspot> selectAll(int pageNum, int pageSize);
 
 	int deleteByPrimaryKey(String id);
 
