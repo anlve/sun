@@ -6,7 +6,7 @@ import com.anlve.sun.model.User;
 
 public interface UserMapper {
 
-	int insertSelective(User record);
+	List<User> selectAllUser();
 
-    List<User> selectAllUser();
+    int insertSelective(User record);
 }
