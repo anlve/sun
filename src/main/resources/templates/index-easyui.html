@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<title>ONEPRICE</title>
+	<!-- CSS文件 -->
+	<link rel="stylesheet" type="text/css" href="plugins/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="plugins/easyui/themes/icon.css">
+	<!-- 引入JS -->
+	<script type="text/javascript" src="plugins/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="plugins/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="plugins/easyui/locale/easyui-lang-zh_CN.js"></script>
+	
+	<style type="text/css">
+        .clocks {
+          height: 500px;
+          margin: 25px auto;
+          position: relative;
+          width: 500px;
+        }
+    </style>
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'north',title:'North Title',split:true" style="height:100px;">
+		<div class="clocks">
+            <canvas id="canvas" width="10" height="10"></canvas>
+        </div>
+		<div align="right" style="height: auto;">
+		    	<b>这里需要写入一东西，比如登陆，当前日期</b>
+		    	<input type="date" class="easyui-datebox" style="width:auto;" id="sysdate">
+		    </div>
+	</div>
+    <div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
+    <div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>
+    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+	<script type="text/javascript">
+		$(function(){
+			var curr_time = new Date();
+			var str = curr_time.getFullYear()+"-";
+			str += curr_time.getMonth()+1+"-";
+			str += curr_time.getDate()+"-";
+			str += curr_time.getHours()+":";
+			str += curr_time.getMinutes()+":";
+			str += curr_time.getSeconds();
+			$('#sysdate').datebox('setValue',str);
+		});
+	</script>
+</body>
+</html>
