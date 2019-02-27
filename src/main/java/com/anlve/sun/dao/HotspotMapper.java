@@ -2,7 +2,7 @@ package com.anlve.sun.dao;
 
 import java.util.List;
 
-import com.anlve.sun.model.Hotspot;
+import com.anlve.sun.entity.Hotspot;
 
 public interface HotspotMapper {
 	

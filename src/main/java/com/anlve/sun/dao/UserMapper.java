@@ -2,7 +2,7 @@ package com.anlve.sun.dao;
 
 import java.util.List;
 
-import com.anlve.sun.model.User;
+import com.anlve.sun.entity.User;
 
 public interface UserMapper {
 

@@ -1,4 +1,4 @@
-package com.anlve.sun.model;
+package com.anlve.sun.entity;
 
 public class User {
     private Integer userId;

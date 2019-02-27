@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.anlve.sun.dao.UserMapper;
-import com.anlve.sun.model.User;
+import com.anlve.sun.entity.User;
 import com.anlve.sun.service.UserService;
 import com.github.pagehelper.PageHelper;
 

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.anlve.sun.model.User;
+import com.anlve.sun.entity.User;
 import com.anlve.sun.service.UserService;
 
 @Controller

@@ -9,7 +9,7 @@ spring:
 # MyBatis
 mybatis:
   #   对应实体类路径
-  type-aliases-package: com.anlve.sun.model
+  type-aliases-package: com.anlve.sun.entity
   # mapper映射文件扫描
 #  mapper-locations: classpath:mapper/**/*Mapper.xml
   mapper-locations: classpath:mapper/*Mapper.xml

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.anlve.sun.dao.HotspotMapper;
-import com.anlve.sun.model.Hotspot;
+import com.anlve.sun.entity.Hotspot;
 import com.anlve.sun.service.HotspotService;
 import com.anlve.sun.util.UUIDUtils;
 import com.github.pagehelper.PageHelper;

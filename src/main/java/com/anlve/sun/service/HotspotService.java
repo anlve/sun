@@ -2,7 +2,7 @@ package com.anlve.sun.service;
 
 import java.util.List;
 
-import com.anlve.sun.model.Hotspot;
+import com.anlve.sun.entity.Hotspot;
 
 public interface HotspotService {
 	

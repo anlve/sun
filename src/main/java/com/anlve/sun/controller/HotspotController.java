@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.anlve.sun.model.Hotspot;
+import com.anlve.sun.entity.Hotspot;
 import com.anlve.sun.service.HotspotService;
 
 @RestController /* @Controller + @ResponseBody*/
